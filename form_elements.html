@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Elements</title>
+  </head>
+  <body>
+    <h2>Phát triển phần mềm quản lý</h2>
+    <form action="/action_page.php">
+      <label for="fname">Họ và tên:</label><br />
+      <input type="text" id="fname" name="fname" /><br /><br />
+      <label for="tt">Thông tin:</label>
+      <select id="tt" name="tt" size="3" multiple>
+        <option value="hoten">Mai Văn thanh</option>
+        <option value="msv">2221050673</option>
+        <option value="lop" selected>DCCTCT67_04B</option>
+        <option value="chuyennganh">Tin học kinh tế</option>
+      </select>
+      <input type="submit" value="gửi" />
+    </form>
+    <form action="/action_page.php">
+      <textarea name="message" style="width: 200px; height: 600px">
+Phát triển phần mềm quản lý - Nhóm 100</textarea
+      >
+      <br /><br />
+      <input type="submit" />
+    </form>
+    <button
+      type="button"
+      onclick="alert('Hí ! Mình là Mai Văn Thanh - MSV 2221050673')"
+    >
+      Click Me!
+    </button>
+  </body>
+</html>
