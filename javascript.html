@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+  </head>
+  <body>
+    <h1>Mai Văn Thanh</h1>
+    <p>2221050673</p>
+    <script>
+      function light(sw) {
+        var pic;
+        if (sw == 0) {
+          pic = "https://www.w3schools.com/js/pic_bulboff.gif";
+        } else {
+          pic = "https://www.w3schools.com/js/pic_bulbon.gif";
+        }
+        document.getElementById("myImage").src = pic;
+      }
+    </script>
+    <img
+      id="myImage"
+      src="https://www.w3schools.com/js/pic_bulboff.gif"
+      width="100"
+      height="180"
+    />
+    <p>
+      <button type="button" onclick="light(1)">Bật</button>
+      <button type="button" onclick="light(0)">Tắt</button>
+    </p>
+  </body>
+</html>

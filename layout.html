@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Layout</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      header {
+        background-color: #666;
+        padding: 30px;
+        text-align: center;
+        font-size: 35px;
+        color: white;
+      }
+      section {
+        display: -webkit-flex;
+        display: flex;
+      }
+      nav {
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        background: #ccc;
+        padding: 20px;
+      }
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      article {
+        -webkit-flex: 3;
+        -ms-flex: 3;
+        flex: 3;
+        background-color: #f1f1f1;
+        padding: 10px;
+      }
+      footer {
+        background-color: #777;
+        padding: 10px;
+        text-align: center;
+        color: white;
+      }
+      @media (max-width: 600px) {
+        section {
+          -webkit-flex-direction: column;
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Mai Văn Thanh</h2>
+    <p>2221050673</p>
+    <p>DCCTCT67_04B</p>
+    <header>
+      <h2>Tin học kinh tế</h2>
+    </header>
+    <section>
+      <nav>
+        <ul>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+        </ul>
+      </nav>
+      <article>
+        <h1>Phát triển phần mềm quản lý</h1>
+        <p>Nhóm 100</p>
+        <p>GV:Phạm Quang Hiển</p>
+      </article>
+    </section>
+    <footer>
+      <p>HUMG</p>
+    </footer>
+  </body>
+</html>
