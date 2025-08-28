@@ -22,7 +22,7 @@ namespace MVC.Controllers
             double result = 0;
             string message = "";
 
-            switch (op)
+            switch (b2.Op)
             {
                 case "sum":
                     result = b2.A + b2.B;
@@ -40,7 +40,7 @@ namespace MVC.Controllers
                     break;
 
                 case "div":
-                    if (B != 0)
+                    if (b2.B != 0)
                     {
                         result = b2.A / b2.B;
                         message = $"{b2.A} ÷ {b2.B} = {result}";
