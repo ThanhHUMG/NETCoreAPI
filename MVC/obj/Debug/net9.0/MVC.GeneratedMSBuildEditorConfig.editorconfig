@@ -20,12 +20,20 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
+[D:/NET_Core_API/MVC/Views/Bai2/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFpMlxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/NET_Core_API/MVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/NET_Core_API/MVC/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/NET_Core_API/MVC/Views/Person/bai2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uXGJhaTIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/NET_Core_API/MVC/Views/Person/demo.cshtml]
