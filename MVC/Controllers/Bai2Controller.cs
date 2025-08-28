@@ -1,23 +1,28 @@
-using Microsoft.AspNetCore.Mvc;
-using MVC.Models;
-
 namespace MVC.Controllers
 {
+
+    using Microsoft.AspNetCore.Mvc;
+    using MVC.Models;
     public class Bai2Controller : Controller
     {
-        [HttpGet]
         public IActionResult Index()
         {
             return View();
         }
 
+        public IActionResult Welcome()
+        {
+            ViewData["Message"] = "Your welcome message";
+
+            return View();
+        }
         [HttpPost]
         public IActionResult Index(Bai2 b2)
         {
             double result = 0;
             string message = "";
 
-            switch (b2.Op)   // lấy từ model chứ không phải biến op riêng
+            switch (op)
             {
                 case "sum":
                     result = b2.A + b2.B;
@@ -35,7 +40,7 @@ namespace MVC.Controllers
                     break;
 
                 case "div":
-                    if (b2.B != 0)
+                    if (B != 0)
                     {
                         result = b2.A / b2.B;
                         message = $"{b2.A} ÷ {b2.B} = {result}";
