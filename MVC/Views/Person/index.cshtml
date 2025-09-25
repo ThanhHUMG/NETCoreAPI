@@ -1,4 +1,4 @@
-@model IEnumerable<MVC.Models.Person>
+@model IEnumerable<MVC.Models.Employee>
 
 @{
     ViewData["Title"] = "CSDL";
@@ -16,6 +16,8 @@
             <th>@Html.DisplayNameFor(model => model.FullName)</th>
             <th>@Html.DisplayNameFor(model => model.NamSinh)</th>
             <th>@Html.DisplayNameFor(model => model.DiaChi)</th>
+            <th>@Html.DisplayNameFor(model => model.ChuyenNganh)</th>
+            <th>@Html.DisplayNameFor(model => model.Truong)</th>
             <th>Actions</th>
         </tr>
     </thead>
@@ -24,7 +26,9 @@
         <tr>
             <td>@Html.DisplayFor(modelItem => item.FullName)</td>
             <td>@Html.DisplayFor(modelItem => item.NamSinh)</td>
-            <td>@Html.DisplayFor(ModelItem => item.DiaChi)</td>
+            <td>@Html.DisplayFor(modelItem => item.DiaChi)</td>
+            <td>@Html.DisplayFor(modelItem => item.ChuyenNganh)</td>
+            <td>@Html.DisplayFor(modelItem => item.Truong)</td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary btn-sm">Edit</a> |
                 <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Delete</a>

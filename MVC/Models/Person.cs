@@ -11,4 +11,9 @@ namespace MVC.Models
         public int NamSinh { get; set; } = default!;
         public string DiaChi { get; set; } = default!;
     }
+    public class Employee : Person
+    {
+        public string ChuyenNganh { get; set; } = default!;
+        public string Truong { get; set; } = default!;
+    }
 }
