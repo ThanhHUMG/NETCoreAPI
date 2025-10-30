@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MVC.Models.ThongTin
 {
-    public class Sv
+    public class SinhVien
     {
         [Key]
         public double MSV { get; set; } = default!;

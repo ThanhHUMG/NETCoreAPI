@@ -7,9 +7,9 @@ namespace MVC.Controllers
 {
     public class PersonController : Controller
     {
-        private readonly ApplicationDbcontext _context;
+        private readonly ApplicationDbContext _context;
 
-        public PersonController(ApplicationDbcontext context)
+        public PersonController(ApplicationDbContext context)
         {
             _context = context;
         }

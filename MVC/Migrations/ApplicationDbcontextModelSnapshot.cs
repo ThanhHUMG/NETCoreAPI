@@ -8,8 +8,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace MVC.Migrations
 {
-    [DbContext(typeof(ApplicationDbcontext))]
-    partial class ApplicationDbcontextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(ApplicationDbContext))]
+    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -47,7 +47,7 @@ namespace MVC.Migrations
                     b.UseTphMappingStrategy();
                 });
 
-            modelBuilder.Entity("MVC.Models.ThongTin.Sv", b =>
+            modelBuilder.Entity("MVC.Models.ThongTin.SinhVien", b =>
                 {
                     b.Property<double>("MSV")
                         .HasColumnType("REAL");
@@ -62,7 +62,24 @@ namespace MVC.Migrations
 
                     b.HasKey("MSV");
 
-                    b.ToTable("SinhViens");
+                    b.ToTable("SinhVien");
+                });
+
+            modelBuilder.Entity("MVC.Models.ThongTin.Test", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("x")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("y")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Tests");
                 });
 
             modelBuilder.Entity("MVC.Models.Employee", b =>
