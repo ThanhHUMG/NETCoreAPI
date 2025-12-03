@@ -1,19 +1,23 @@
 using Microsoft.EntityFrameworkCore;
+using OfficeOpenXml;
 using MVC.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Chỉ khai báo 1 lần DbContext
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("ApplicationDbContext") 
-    ?? throw new InvalidOperationException("Connection string 'ApplicationDbContext' not found.")));
+// EPPlus License - dùng cho phi thương mại
+ExcelPackage.License.SetNonCommercialPersonal("Thanh Mai");
 
-// Add services to the container
+// Đăng ký DbContext dùng SQLite
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("ApplicationDbContext"))
+);
+
+// Add MVC
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline
+// Middleware
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
@@ -21,14 +25,13 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthorization();
 
-app.MapStaticAssets();
-
+// Default route
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}")
-    .WithStaticAssets();
+    pattern: "{controller=Person}/{action=Index}/{id?}");
 
 app.Run();

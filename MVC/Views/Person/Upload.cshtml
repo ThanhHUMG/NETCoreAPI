@@ -1,0 +1,22 @@
+@{
+    ViewData["Title"] = "Upload Excel";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="mb-2">
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</div>
+
+<form asp-action="Upload" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label>Chọn file Excel (.xlsx hoặc .xls)</label>
+        <input type="file" name="file" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary mt-2">Upload</button>
+</form>
+
+@if (TempData["msg"] != null)
+{
+    <div class="alert alert-warning mt-2">@TempData["msg"]</div>
+}
